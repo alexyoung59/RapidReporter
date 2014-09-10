@@ -1,0 +1,727 @@
+/* COMMONLY USED STYLES
+-------------------------------------*/
+@import url("/Styles/ButtonStyle.css");
+@import url("/Styles/TablesorterStyle.css");
+@import url("/Styles/ToolbarStyle.css");
+@import url("/Styles/PopupHelp.css");
+
+/* PRINT
+-------------------------------------*/
+@media print {
+	.DoNotPrint { display:none; }
+
+	#PageContainer #LeftFill,
+	#PageContainer #RightFill,
+	#ImgContentWidth { display:none; }
+}
+@media screen {	
+	#PageContainer #Content /* FRAME */
+		{
+		width:990px;
+		overflow: hidden;
+		background: url("/images/mainLayout/mainContainer.gif") no-repeat top left #FFFFFF;
+		border-top:0;
+		border-right:1px solid #ccc;
+		border-bottom:0;
+		border-left:1px solid #ccc;
+		}
+
+	#PageContainer #LeftFill, /* FRAME */
+	#PageContainer #RightFill /* FRAME */
+		{
+		background: url("/images/mainLayout/mainContainerBkgd.gif") repeat-x top left #FFFFFF;
+		}
+}
+
+/* Defaults for all of PTS 
+-------------------------------------*/
+*
+	{
+	font-family: Arial, Sans-Serif;
+	font-size: 11px;
+	}
+
+body
+	{
+	background: #fff;
+	color: #333;
+	text-align:center;
+	padding:0; /* FRAME padding:5px; */
+	margin:0;
+	border:0;
+	font-size: 250%;
+	
+	/* overflow: auto; */
+	overflow-x: hidden;   /* no horizontal scrolling */
+	
+	/*
+	Scrollbar whitespace issue:
+	This is an IE problem. The only way to make that whitespace disappear is to use 
+	overflow:auto
+	However, this allows both horizontal and vertal scrolling.  We don't want horizontal scrolling.
+
+	Forcing a scrollbar at all times didn't work with PTS because of frames:
+	html { height: 100%; margin-bottom: 1px; }
+	*/
+	}
+
+table
+	{
+	border: 0;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+td { white-space:nowrap; }
+
+div
+	{
+    margin: 0 auto;
+    }
+
+form { margin: 0; padding: 0; text-align: left;} 
+
+/* Main Layout 
+-------------------------------------*/
+	
+.DBForm
+	{
+	border:0;
+	margin:0 5 5 5px;
+	width:100%;
+	}
+
+#PageContainer /* FRAME */
+	{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	border:0;
+	}
+
+#PageContainer #LeftFill, /* FRAME */
+#PageContainer #RightFill /* FRAME */
+	{
+	text-align:center;
+	vertical-align:bottom;
+	padding:0;
+	margin:0;
+	border:0;
+	}
+
+#PageContainer #Content /* FRAME */
+	{
+	text-align:center;
+	vertical-align:top;
+	padding:10 5 5 5px;
+	margin:0;
+	}
+
+#PageBody, .PageBody
+	{
+	display:none;
+	width: 98%;
+	margin: 0;
+	padding: 0;
+	}
+
+div#PageHeader
+	{
+	width: 98%;
+	margin: 3 3 10 3px;
+	padding: 2 5px;
+	font-size: 12pt;
+	font-weight: bold;
+	color:#336699;
+	white-space: nowrap;
+	overflow: visible;
+	text-align: center;
+    }	
+
+div#PageHeader div
+	/* controls "pageName" */
+	{
+	color: #162148;	
+	font-size: 20px;
+	text-transform: uppercase;
+	white-space: nowrap;
+    }
+
+span#SubPageName
+    {
+    color: #336699;		
+    font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: visible;
+	}
+
+span.pageHeaderInsAddress 
+/* used on Policy Info for the Insured address at the top */
+	{
+	font-size: 7pt;
+	font-style: italic;
+	color: #666;
+	text-transform: none;
+	}
+
+
+/* Main General Styles - these should be used everywhere
+-----------------------------------------------------------*/
+.altOdd,
+.RowAltOff, 
+.RowAltOffHoverOff {
+	background:#fff; /* alternate row bkgd color 1 */
+}
+
+.altEven,
+.RowAltOn,
+.RowAltOnHoverOff {
+	background-color: #e8edf4;	/* alternate row bkgd color 2 */
+}
+
+.RowAltOnHoverOn,
+.RowAltOffHoverOn {
+	background:#ffffe3; /* hover color */
+	cursor: default;
+}
+
+.tsHeader { background-color: #7c8ea7; font-weight: bold; color: #fff; } /* for pages not using tablesorter */
+
+    	
+/* Show/Hide - used in Notes, InProgress
+--------------------------------------------*/
+#HideShow { display:none; }
+.Closed { display:none; }
+.Open { display:block; }
+
+.ShowHideContainer {
+	width: 750px;
+}
+
+div.ShowHideTitle
+	{
+	background-image: url('/images/showHide/showHideMenu_bkgd3.gif');
+	background-color:#7c8ea7;
+	color: #fff;
+	padding-right: 10px;
+	cursor: pointer;
+	width:100%;
+	text-align:left;
+	margin: 0px 0px 5px 0px;
+	padding: 2px 8px;
+	font-weight:bold;
+	}
+	
+div.ShowHideContent
+	{
+	padding-bottom: 10px;	
+	}
+
+.Show3D,
+.Show3DTab, 
+.TableSelection,
+div.ListContainer
+	{
+	width: 98%;
+	margin:0 5 5 5px;
+	}
+div.ShowHideTitle a,
+div.LookupTitle a
+	{
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	}
+
+.noteBody
+	{
+	padding: 3px 15px;
+	background-color: #ffffe3;
+	border: 1px solid #ccc;
+	white-space: normal;
+	}
+.internalNoteBody {
+	padding: 3px 15px;
+	background-color: #ffccff;
+	border: 1px solid #660099;
+	white-space: normal;
+	}
+	
+.instructions {
+	padding: 3px;
+	background-color: #e1f1ff;
+	border: 1px solid #aed4f3;
+	white-space: normal;
+}
+	.instructionDots {
+		border-left: 3px dashed white;
+		padding: 5px 10px 10px 10px;
+		font-size: 14px;
+		color: #666666;
+	}
+	.instructionDots td, .instructionDots div, .instructionDots label, 
+		.instructionDots span, .instructionDots li {
+		font-size: 14px;
+		color: #666666;
+	}
+/* Links 
+-------------------------------------*/
+a
+	{
+	text-decoration:none;
+	font-weight:bold;
+	color:#336699;
+	}
+
+a:hover
+	{
+	text-decoration:underline;
+	}
+
+a.ModuleLink
+	{
+	border:1px solid #336699;
+	background: #336699;
+	font-size:8pt;
+	padding: 2 4px;
+	}
+
+a:link.Help 
+{
+	border-bottom: 1px dotted #336699;
+}
+a.Help:hover 
+{
+	border-bottom: 1px dotted #336699;
+	cursor: help;
+}
+
+/* Images 
+-------------------------------------*/
+
+img
+	{
+	border:0;
+	vertical-align:middle;
+	}
+	
+/* ACTION ICONS */
+.icon_tool 
+	{
+	margin: 0px 3px 3px 3px;
+	}
+	
+img#ShowHideImg
+	{
+	width:10px;
+	height:10px;
+	margin:0 2px;
+	}
+img.setupIcon 
+	{
+	border: 0;
+	width: 83px;
+	height: 83px;
+	}
+.datepicker {
+	background: white url(/images/icons/generalPTS/calendar.gif) no-repeat 98% 50%;
+	}
+.ui-datepicker-trigger {
+	margin: -5px 0px 0px -17px;
+}
+	
+/* DIV headings, table headings
+-------------------------------------*/
+
+.newGUIheading
+	{
+	font-weight: bold;
+	font-size: 14px;
+	color: #336699;
+	text-align: left;
+	border-bottom: 1px solid #6699cc;
+	}
+	
+	.newGUIheading div, .newGUIheading span
+		{
+		font-weight: bold;
+		font-size: 14px;
+		color: #336699;
+		text-align: left;		
+		}
+
+.HeaderCell,
+.TabHeaderCell,
+.HeaderCell span#PageHeader
+	{
+	font-size: 9pt;
+	font-weight: bold;
+	color: #fff;
+    vertical-align: middle;
+    padding: 3px;
+    background-image: url('/images/showHide/showHideMenu_bkgd3.gif');
+    }
+    
+tr.HeaderRow td
+	{
+	font-weight: bold;
+	vertical-align: bottom;
+	border-bottom: 1px solid black;
+	background-color: #e8edf4;
+	color: #081540;
+	}
+
+.displayHeadingBig, .displayHeadingBig div {
+	font-size: 23px;
+	font-weight: bold;
+	color: #081540;
+}
+
+.displayHeadingSm, .displayHeadingSm div{
+	font-size: 15px;
+	font-weight: bold;
+	color: #081540;
+}
+
+
+/* Form Inputs 
+-------------------------------------*/
+input, select, textarea 
+	{
+	/* border: 1px solid #6699cc; */
+	}
+
+.InputItemRequired, 
+input.Required,
+textarea.Required,
+select.Required
+	{
+	/* background: #ebeefa url('/images/misc/requiredBkgd.gif') top right repeat-y; */
+	background-color: #ffffe3;
+	border-top: 2px solid #404040;
+	border-right: 1px solid #d4d0c8;
+	border-bottom: 1px solid #d4d0c8;
+	border-left: 2px solid #404040;
+	font-weight:normal;
+	}
+
+.InputItemNotRequired, .NotRequired
+	{
+		
+	}
+
+input.RequiredInvalid,
+textarea.RequiredInvalid
+	{
+    border-top:2px solid #800000;
+    border-right:1px solid #CC0000;
+    border-bottom:1px solid #CC0000;
+    border-left:2px solid #800000;
+    /*background: #ffdddd url('/images/misc/requiredInvalidBkgd.gif') top right repeat-y;*/
+    background: #ffdddd;
+	}
+select.RequiredInvalid
+	{
+    background:#FFBBBB;
+	}
+		
+.RequiredText, .InputLabelRequired, .InputLabel2Required
+	{
+	font-weight:bold;
+	color: #0066cc;
+	}
+	
+/* TEXT
+-------------------------------------*/
+	
+.emAttentionSm
+	{
+	font: italic bold;
+	color: #0066cc;		
+	}
+.emAttention
+	{
+	font: italic bold 14px;
+	color: #0066cc;
+	}
+.inactiveEM
+	{
+	color: #888;
+	font-style: italic;
+	font-weight: bold;
+	}
+.darkEM {
+	color: #162148;
+	font-weight: bold;	
+	}
+.darkBold {
+	color: #162148;
+	font-weight: bold;	
+	}
+.unacceptable
+	{
+	color: #ff0000;
+	text-transform: uppercase;
+	font-size: 8px;
+	font-weight: bold;
+	}
+.internalUseOnly {
+	background-color: #ffccff;
+	border-left: 3px solid #660099;
+	border-right: 3px solid #660099;
+	border-bottom: 3px solid #660099;
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+}
+	.internalUseOnly .title {
+		background-color: #660099;
+		color: #eee;
+		text-align: left;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 9px;
+		padding: 3px 0px 3px 10px;
+		margin: -10px -10px 10px -10px;
+	}
+.idmiDEVOnly {
+	background-color: #ccffcc;
+	border-left: 3px solid #009900;
+	border-right: 3px solid #009900;
+	border-bottom: 3px solid #009900;
+	padding: 10px;
+	margin: 10px;
+	width: 100%;
+}
+	.idmiDEVOnly .title {
+		background-color: #009900;
+		color: #eee;
+		text-align: left;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 9px;
+		padding: 3px 0px 3px 10px;
+		margin: -10px -10px 10px -10px;
+	}
+
+/* Reports
+-------------------------------------*/
+	
+.ReportBox
+	{
+	width: 90%;
+	height: 400px;
+	}
+
+#ReportTable td
+	{
+	padding: 3px;
+	border: 5px solid #fff;
+	}
+.ReportSymbol, .ReportSymbol a
+	{
+	font-size:15px;
+	font-weight: normal;
+	color: #000033;
+	}
+.ReportModuleName 
+	{
+	font-family: Trebuchet MS, Trebuchet, Sans-Serif;
+	font-size: 14px;	
+	}
+.ReportModuleNameCurrent 
+	{
+	font-family: Trebuchet MS, Trebuchet, Sans-Serif;
+	font-size: 17px;
+	color: #07123e;
+	}
+.Reports 
+	{
+	font-family: Trebuchet MS, Trebuchet, Sans-Serif;
+	font-size: 10px;
+	letter-spacing: 1px;
+	}
+.ReportAddlInfoLbl
+	{
+	background-image: url(/images/tabPage/sidebar_continuation135.jpg);
+	border-right: 5px solid white;
+	text-align: right;
+	padding: 5px 10px;
+	}
+	
+a.ReportLink:hover
+	{
+	color: #07123e;
+	text-decoration: none;
+	}
+
+/* Misc. 
+-------------------------------------*/
+
+/* In Progress */	
+.inProgressCurrent
+	{
+	font-size: 16px;
+	background-image: url('/images/showHide/showHideMenu_bkgd3.gif');
+	color: #fff;
+	padding: 5px 15px;
+	}
+
+/* Users, Vehicle Surcharge */	
+.utypeLbl
+	{
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 3px 0px 3px 8px;
+	background-color: #274b72;
+	color: #fff;
+	}
+
+.PolicyInfoTable
+	{
+	width: 750px;
+	padding: 0px;
+	}
+.ControlPanel
+	{
+	width: 600px;
+	text-align: center;
+	margin-top: 20px;
+	}
+.ControlPanel td
+	{
+	padding: 15px;
+	}
+
+/* GENERIC CLASSES 
+-------------------------------------*/
+.Left, .Left td, .IndentLeft, .IndentLeft td { text-align:left; }
+.Center, .Center td { text-align:center; }
+.Right, .Right td, .IndentRight, .IndentRight td { text-align:right; }
+.centered { margin: 0 auto; text-align:center; }
+
+.VTop, .VTop td { vertical-align:top; }
+.VMiddle, .VMiddle td { vertical-align:middle; }
+.VBottom, .VBottom td { vertical-align:bottom; }
+
+.FloatR, .floatR, .FRight { float:right; }
+.FloatL, .floatL, .FLeft { float:left; }
+.ClearBoth, .clr { clear:both; }
+
+.Font6 { font-size:6pt; }
+.Font7 { font-size:7pt; }
+.Font8 { font-size:8pt; }
+.Font9 { font-size:9pt; }
+.Font10 { font-size:10pt; }
+.Font11 { font-size:11pt; }
+.Font12 { font-size:12pt; }
+.Font13 { font-size:13pt; }
+.Font14 { font-size:14pt; }
+.Font15 { font-size:15pt; }
+.Font20 { font-size:20pt; }
+
+.Padding3 { padding:3px; }
+.Padding5 { padding:5px; }
+.Padding10 { padding:10px; }
+.Padding15 { padding:15px; }
+.Padding20 { padding:20px; }
+	
+.PaddingT5, .PaddingT5 td { padding-top:5px; }
+.PaddingR5, .PaddingR5 td { padding-right:5px; }
+.PaddingB5, .PaddingB5 td { padding-bottom:5px; }
+.PaddingL5, .PaddingL5 td { padding-left:5px; }
+
+.PaddingT10, .PaddingT10 td { padding-top:10px; }
+.PaddingR10, .PaddingR10 td, .PadR10 { padding-right:10px; }
+.PaddingB10, .PaddingB10 td { padding-bottom:10px; }
+.PaddingL10, .PaddingL10 td, .PadL10 { padding-left:10px; }
+
+.PaddingT15, .PaddingT15 td { padding-top:15px; }
+.PaddingR15, .PaddingR15 td { padding-right:15px; }
+.PaddingB15, .PaddingB15 td { padding-bottom:15px; }
+.PaddingL15, .PaddingL15 td { padding-left:15px; }
+
+.PaddingT20, .PaddingT20 td { padding-top:20px; }
+.PaddingR20, .PaddingR20 td { padding-right:20px; }
+.PaddingB20, .PaddingB20 td { padding-bottom:20px; }
+.PaddingL20, .PaddingL20 td { padding-left:20px; }
+
+.Margin5 { margin:5px; }	
+.Margin10 { margin:10px; }
+.Margin15 { margin:15px; }
+.Margin20 { margin:20px; }
+	
+.MarginT5 { margin-top:5px; }
+.MarginR5 { margin-right:5px; }
+.MarginB5 { margin-bottom:5px; }
+.MarginL5 { margin-left:5px; }
+
+.MarginT10 { margin-top:10px; }
+.MarginR10 { margin-right:10px; }
+.MarginB10 { margin-bottom:10px; }
+.MarginL10 { margin-left:10px; }
+
+.MarginT15 { margin-top:15px; }
+.MarginR15 { margin-right:15px; }
+.MarginB15 { margin-bottom:15px; }
+.MarginL15 { margin-left:15px; }
+
+.MarginT20 { margin-top:20px; }
+.MarginR20 { margin-right:20px; }
+.MarginB20 { margin-bottom:20px; }
+.MarginL20 { margin-left:20px; }
+
+.IndentLeft { padding-left:20px; }
+.IndentCenter { padding-left:20px; padding-right:20px; }
+.IndentRight { padding-right:20px; }
+
+.Bold { font-weight:bold; }
+.Normal { font-weight:normal; }
+.Italic { font-style:italic; }
+.Narrow { letter-spacing:-1px; }
+.SmallCaps { font-variant:small-caps; }
+.WideFont { font-family:verdana,arial; }
+
+.Border, .Border td { border:1px solid #333; }
+.BorderT, .BorderT td { border-top:1px solid #333; }
+.BorderR, .BorderR td { border-right:1px solid #333; }
+.BorderB, .BorderB td { border-bottom:1px solid #333; }
+.BorderL, .BorderL td { border-left:1px solid #333; }
+.BorderTop { border-top: 1px solid #333; } /* use for totals */
+
+.PT, .PT td { padding-top:5px; }
+.PR, .PR td  { padding-right:5px; }
+.PB, .PB td  { padding-bottom:5px; }
+.PL, .PL td  { padding-left:5px; }
+.PA, .PA td  { padding:5px; }
+
+.Abbrev { cursor:help; }
+a .Abbrev { cursor:auto; }
+
+.NoDisplay { display: none; }
+.Inline { display: inline; }
+.nowrap { white-space: nowrap; }
+.Wrap { white-space: normal; }
+.condenseLeft { width: 1%; } /* use on tables */
+
+.white { color: White; }
+.black { color: Black; }
+.caps { text-transform: uppercase; }
+.debug { border: 1px solid purple; background-color: Aqua; }
+
+.Red, .red { color:red; }
+.Gray, .gray { color:gray; }
+.Green, .green { color:Green; }
+.Blue, .blue { color:#0066cc; } 
+div.SignOff { color:blue; }
+div.NotApproved { color:red; }
+div.InfoDue { color:maroon; }
+div.Cat { color:gray; }
+.PastDue { font-weight:bold; }
+.Late { font-weight:bold; color:maroon; }
+.NewObject { color: #009933; font-weight:bold; }
+.InValid { background-color: #FFBBBB; }
