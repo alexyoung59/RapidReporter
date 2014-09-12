@@ -163,7 +163,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <p>Please provide some additional details about your accident.</p>
+           Almost done! Please fill out the remaining questions to finish your claim.
           </div>
         </div>
       </div>
@@ -173,59 +173,69 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 signup">
           <h3 class="hl top-zero">PTS Rapid Reporter</h3>
-          <h4 class="top-zero">The questions below are need to begin your claim.  Please answer each one to the best of your ability.  Once you have compeleted this step, you claim will be ready for review by the company.</br>Use the police report if available.
+          <h4 class="top-zero">Please continue to answer each question to the best of your ability.  Once you have compeleted this step, you claim will be ready for review by the company.</br>Use the police report if available.
           </h3>
 
           <hr>
-          <form role="form" id="registrationForm" method="POST" action="newClaimant.html">
+          <form role="form" id="registrationForm" method="POST" action="confirmClaim.html">
 
             <div class="info-board info-board-green">
-				Approximately what time of day did this accident occur?
-            	 <input type="time" class="form-control" id="timeOfIncident" placeholder="Time of incident" data-placement="left" data-trigger="focus">
+				Were you the driver or passenger?<br/><br/>
+            	 <input type="radio" name="isDriver" id="isDriverY" placeholder="Y" data-placement="left" data-trigger="focus" label="Yes" checked="true"> Driver
+
+               <input type="radio" name="isDriver" id="isDriverN" placeholder="N" data-placement="left" data-trigger="focus" style="margin-left:0.25in;"> Passenger
             </div>
 
             <div class="info-board info-board-green">
-				Who was driving the vehicle?
+				What is your home phone?
 
-            	 <input type="text" class="form-control" id="DriverName" placeholder="Driver's Name" data-placement="left" data-trigger="focus">
+            	 <input type="text" class="form-control" id="homePhone" placeholder="Phone Number" data-placement="left" data-trigger="focus">
 
-        	 	   <input type="date" class="form-control" id="driverDOB" placeholder="Driver's Birth Date" data-toggle="popover" data-placement="left" data-trigger="focus" data-original-title="Birth Date">
-
-            	 <input type="text" class="form-control" id="licNumber" placeholder="Drivers License Number" data-placement="left" data-trigger="focus">
             </div>
 
         	<div class="info-board info-board-green">
-				Where did the accident take place?
-            	 <input type="text" class="form-control" id="street" placeholder="Street" data-placement="left" data-trigger="focus">
-            	 <input type="text" class="form-control" id="city" placeholder="City" data-placement="left" data-trigger="focus">
-            	 <input type="text" class="form-control" id="state" placeholder="State" data-placement="left" data-trigger="focus">
-            	 <input type="text" class="form-control" id="zip" placeholder="Zip" data-placement="left" data-trigger="focus">
+				What is your drivers license number?
+            	 <input type="text" class="form-control" id="dlNum" placeholder="Lic Num" data-placement="left" data-trigger="focus">
+
             </div>
 
           <div class="info-board info-board-green">
-        Please describe in as much detail as possible what occurred:
-               <textarea class="form-control" rows="6" id="details" placeholder="Enter your comments here" data-placement="left" data-trigger="focus"></textarea>
+        Were you injured?<br/><br/>
+              <input type="radio" name="injured" id="injuredY" placeholder="Y" data-placement="left" data-trigger="focus" label="Yes" > Yes
+
+               <input type="radio" name="injured" id="injuredN" placeholder="N" data-placement="left" data-trigger="focus" style="margin-left:0.25in;"checked="true"> No
             </div>
 
           <div class="info-board info-board-green">
-        What is the name of the police department listed on the report?
-               <input type="text" class="form-control" id="dept" placeholder="Police Dept" data-placement="left" data-trigger="focus">
+        Please describe in as much detail any injuries you have sustained:
+               <textarea class="form-control" rows="6" id="injuries" placeholder="Enter your comments here" data-placement="left" data-trigger="focus"></textarea>
             </div>
 
           <div class="info-board info-board-green">
-        What is the name of the police officer who took the report?
-               <input type="text" class="form-control" id="officerName" placeholder="Officer Name" data-placement="left" data-trigger="focus">
+        Was the vehicle you were riding in damaged in this accident?<br/><br/>
+              <input type="radio" name="damaged" id="damagedY" placeholder="Y" data-placement="left" data-trigger="focus" label="Yes" checked="true"> Yes
+
+               <input type="radio" name="damaged" id="damagedN" placeholder="N" data-placement="left" data-trigger="focus" style="margin-left:0.25in;"> No
             </div>
 
           <div class="info-board info-board-green">
-        Where any citations issued?<br/><br/>
-
-               <input type="radio" name="citation" id="citationY" placeholder="Y" data-placement="left" data-trigger="focus" label="Yes"> Yes
-
-               <input type="radio" name="citation" id="citationN" placeholder="N" data-placement="left" data-trigger="focus" style="margin-left:0.25in;" checked="true"> No
-
-
+        Please describe in as much detail as you can any damage your vehicle incurred:
+               <textarea class="form-control" rows="6" id="damageDetails" placeholder="Enter your comments here" data-placement="left" data-trigger="focus"></textarea>
             </div>
+
+          <div class="info-board info-board-green">
+        Are you insured?
+              <input type="radio" name="isInsured" id="insuredY" placeholder="Y" data-placement="left" data-trigger="focus" label="Yes" checked="true"> Yes
+
+               <input type="radio" name="isInsured" id="insuredN" placeholder="N" data-placement="left" data-trigger="focus" style="margin-left:0.25in;"> No
+            </div>
+
+          <div class="info-board info-board-green">
+        If you are insured, who is your insurance company and what is your policy number?
+               <input type="text" class="form-control" id="company" placeholder="Company" data-placement="left" data-trigger="focus">
+               <input type="text" class="form-control" id="policuNum" placeholder="Policy Number" data-placement="left" data-trigger="focus">
+            </div>
+
 
 
 
