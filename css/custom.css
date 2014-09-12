@@ -214,7 +214,7 @@ h1.hl small, h2.hl small, h3.hl small, h4.hl small, h5.hl small, h6.hl small {
 	padding: 20px;
 	margin-right: 1px;
 	text-align: center;
-	color: #888;
+	color: #00000;
 	width: 227px;
 	height: 100px;
 }
@@ -351,7 +351,7 @@ h1.hl small, h2.hl small, h3.hl small, h4.hl small, h5.hl small, h6.hl small {
 .modal-header {
 	background: #f5f5f5;
 }
-.modal-header > img, 
+.modal-header > img,
 .message-answer > img {
 	height: 50px;
 	width: 50px;
@@ -438,7 +438,7 @@ h1.hl small, h2.hl small, h3.hl small, h4.hl small, h5.hl small, h6.hl small {
 .message-answer > form {
 	width: 80%;
 	float: left;
-}	
+}
 
 /* ===== Blog ===== */
 
@@ -813,7 +813,7 @@ img.img-about {
 
 .faq-cats ul {
 	list-style-type: none;
-	padding: 0; 
+	padding: 0;
 	margin: 0;
 }
 .faq-cats ul li:first-child {
@@ -1261,14 +1261,14 @@ li.account p{
 }
 
 @media (max-width: 1200px) { /* Adjusting for large devices */
-	
+
 	/* Pricing page arrows */
-	
+
 	.pricing .head .arrow {
 		border-right-width: 95px;
 		border-left-width: 95px;
 	}
-	
+
 	/* Services */
 
 	.services li {
@@ -1282,15 +1282,15 @@ li.account p{
 	}
 }
 @media (max-width: 992px) { /* Adjusting for small devices */
-	
+
 	/* Pricing page arrows */
-	
+
 	.pricing .head .arrow {
 		border-right-width: 68px;
 		border-left-width: 68px;
 		border-top-width: 20px;
 	}
-	
+
 	/* Services */
 
 	.services li {
@@ -1306,7 +1306,7 @@ li.account p{
 @media (max-width: 768px) { /* Adjusting for mobile */
 
 	/* Navigation */
-	
+
 	.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
 	.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,
 	.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -1315,7 +1315,7 @@ li.account p{
 	}
 
 	/* Index page background */
-	
+
 	#wrap h1, #hp-slider h1 {
 		font-size: 32px;
 		margin: 70px 0 0 0;
@@ -1349,15 +1349,15 @@ li.account p{
 	.step a.sbtn {
 		margin-left: 65px;
 	}
-	
+
 	/* Registration form popover */
-	
+
 	.signup .popover {
 		display: none;
 	}
-	
+
 	/* 404 */
-	
+
 	.not-found .digits {
 		font-size: 140px;
 	}
@@ -1371,9 +1371,9 @@ li.account p{
 	.not-found h2 {
 		font-size: 18px;
 	}
-	
+
 	/* Pricing page */
-	
+
 	.pricing .head {
 		padding: 20px;
 	}
@@ -1386,7 +1386,7 @@ li.account p{
 	.pricing .item:hover {
 		margin: 20px 0;
 	}
-	
+
 	/* Services */
 
 	.services ul {
@@ -1442,16 +1442,16 @@ li.account p{
 	a.carousel-arrow-next {
 		left: 50%;
 	}
-	
+
 	/* Navbar dropdown */
-	
+
 	.dropdown-menu .divider {
 		height: 1px;
 		margin: 9px 0;
 		overflow: hidden;
 		background-color: #999;
 	}
-	
+
 	/* Timeline */
 	.timeline-block {
 		border-left: 0;

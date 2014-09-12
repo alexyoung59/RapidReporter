@@ -43,6 +43,6 @@
 	</table>
 	<input type="hidden" name="nextAction" value="newClaimant">
 	<input type="submit" value="Continue">
-	</form> 
+	</form>
 	<cfinclude template="Includes/footer.cfm">
 </cfoutput>
