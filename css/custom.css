@@ -219,7 +219,7 @@ h1.hl small, h2.hl small, h3.hl small, h4.hl small, h5.hl small, h6.hl small {
 	height: 100px;
 }
 .services li p {
-	overflow: hidden;
+	overflow: visible;
 	white-space: nowrap;
 }
 .services li p a {
