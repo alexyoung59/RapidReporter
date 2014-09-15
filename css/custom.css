@@ -17,6 +17,11 @@ h1.hl, h2.hl, h3.hl, h4.hl, h5.hl, h6.hl {
 	font-weight: 300;
 	text-transform: uppercase;
 }
+h1.hl-bold, h2.hl-bold, h3.hl-bold, h4.hl-bold, h5.hl-bold, h6.hl-bold {
+	color: #515151;
+	font-weight: bold;
+	text-transform: uppercase;
+}
 h1.hl small, h2.hl small, h3.hl small, h4.hl small, h5.hl small, h6.hl small {
 	text-transform: none;
 }
@@ -1474,6 +1479,8 @@ li.account p{
 .bs-sidebar.affix {
 	position: static;
 }
+
+
 
 /* Show and affix the side nav for ui elements when space allows it */
 @media (min-width: 992px) {
