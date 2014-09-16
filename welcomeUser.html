@@ -173,7 +173,8 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3 signup">
           <h3 class="hl top-zero">Welcome To PTS Rapid Reporter</h3>
-          <h4 class="top-zero">Enter the information below so we can validate the policy.</h3>
+          <h4 class="top-zero">Enter the insured information below.</h3>
+          <h6>This information can be found on the PTS Client ID Card or the police report.</h6>
           <hr>
           <form role="form" id="registrationForm" method="POST" action="sign-up.html">
             <div class="form-group">
@@ -187,6 +188,12 @@
             </div>
             <div class="form-group">
               <input type="text" class="form-control" id="vinNumber" placeholder="Vin number of insureds vehicle" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter the vin number from the vehicle you were driving." data-original-title="Vin Number">
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> The above information is my policy information.
+              </label>
             </div>
 
             <button type="submit" class="btn btn-green">Validate Policy</button>
